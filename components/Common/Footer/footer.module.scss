@@ -1,0 +1,207 @@
+@import "../../../assets/scss/variables.scss";
+
+.footer {
+    padding: 0px 15px 15px 15px;
+
+    .footer_background_box {
+        border-radius: 60px 60px 10px 10px;
+        padding: 64px 0px 47px 0px;
+        background-color: $background-color;
+        position: relative;
+
+        @media (max-width: 991px) {
+            padding: 50px 20px 40px 20px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 30px 15px;
+        }
+    }
+
+    .footer_title {
+        margin-bottom: 20px;
+    }
+
+    .footer_top {
+        padding-bottom: 40px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer_one {
+        .footer_text {
+            margin: 15px 0px 27px 0px;
+            p {
+                line-height: 26px;
+            }
+        }
+
+        .email_wrapper {
+            a {
+                font-size: $text-medium;
+                transition: $transition-1;
+
+                &:hover {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(28%) sepia(86%) saturate(1971%)
+                            hue-rotate(244deg) brightness(108%) contrast(98%);
+                        transition: $transition-1;
+                    }
+
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .footer_two {
+        padding-left: 50px;
+
+        .footer_links {
+            gap: 20px;
+            margin-right: -12px;
+
+            @media (max-width: 575px) {
+                margin-right: 0px;
+            }
+
+            li {
+                a {
+                    transition: $transition-1;
+                    font-size: $text-medium;
+
+                    &:hover {
+                        img {
+                            filter: brightness(0) saturate(100%) invert(28%) sepia(86%)
+                                saturate(1971%) hue-rotate(244deg) brightness(108%) contrast(98%);
+                            transition: $transition-1;
+                        }
+
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1199px) {
+            padding-left: 30px;
+        }
+
+        @media (max-width: 991px) {
+            padding-left: 0px;
+        }
+    }
+
+    .footer_buttons {
+        gap: 16px;
+
+        @media (max-width: 520px) {
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                max-width: 260px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+
+    .footer_bottom {
+        padding-top: 36px;
+
+        @media (max-width: 767px) {
+            padding-top: 30px;
+        }
+
+        ul {
+            gap: 32px;
+
+            li {
+                &:nth-child(2) {
+                    position: relative;
+
+                    &::after,
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 4px;
+                        width: 4px;
+                        border-radius: 100%;
+                        background-color: rgba(255, 255, 255, 0.5);
+                    }
+
+                    &::before {
+                        left: -14px;
+                    }
+
+                    &::after {
+                        right: -14px;
+                    }
+                }
+            }
+
+            a {
+                transition: $transition-1;
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .privacy_links {
+            @media (max-width: 480px) {
+                flex-direction: column !important;
+                gap: 20px;
+
+                li {
+                    &:before {
+                        all: unset !important;
+                    }
+
+                    &:after {
+                        all: unset !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_camera_image {
+        position: absolute;
+        top: -75px;
+        left: 108px;
+
+        @media (max-width: 1700px) {
+            top: -110px;
+            left: 40px;
+        }
+
+        @media (max-width: 1399px) {
+            img {
+                height: 130px;
+                width: 130px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            left: 30px;
+            top: -90px;
+
+            img {
+                height: 110px;
+                width: 110px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            top: -70px;
+
+            img {
+                height: 90px;
+                width: 90px;
+            }
+        }
+    }
+}

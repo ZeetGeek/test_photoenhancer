@@ -1,0 +1,37 @@
+@import "./fonts.scss";
+
+// * fonts family variables
+$primary-fonts: var(--font-primary);
+$secondary-fonts: var(--font-secondary);
+
+// * fonts size variables
+$h1-title: 68px;
+$h2-title: 62px;
+$h3-title: 38px;
+$h4-title: 34px;
+$h5-title: 28px;
+$h6-title: 26px;
+$h7-title: 20px;
+$text-very-large: 22px;
+$text-large: 20px;
+$text-medium: 18px;
+$text-small: 16px;
+$text-very-small: 14px;
+
+// * color variables
+$primary-color: #7806f3;
+$secondary-color: #8e53fd;
+$accent-color: #f858d9;
+$background-color: #110b1d;
+$gray-color: #9a989e;
+$gray-color-light: #aba6b6;
+$black-color: #000;
+$white-color: #fff;
+
+$button-title-color: rgba(255, 255, 255, 0.8);
+$section-blur-bg-color: rgba(255, 255, 255, 0.1);
+$feature-name: #611df7;
+$yellow-gray: #fff;
+
+// * transition variables
+$transition-1: 0.2s;

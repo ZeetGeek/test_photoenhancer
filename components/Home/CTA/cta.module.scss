@@ -1,0 +1,117 @@
+@import "../../../assets/scss/variables.scss";
+
+.cta {
+     padding-bottom: 222px;
+
+     @media (max-width: 1199px) {
+          padding-bottom: 170px;
+     }
+
+     @media (max-width: 991px) {
+          padding-bottom: 120px;
+     }
+
+     @media (max-width: 767px) {
+          padding-bottom: 80px;
+     }
+
+     @media (max-width: 575px) {
+          padding-bottom: 50px;
+     }
+
+     @media (max-width: 480px) {
+          padding-bottom: 30px;
+     }
+}
+
+.cta_wrapper {
+     position: relative;
+     border-radius: 40px;
+     padding: 40px 60px;
+     background-color: $secondary-color;
+
+     @media (max-width: 991px) {
+          padding: 20px 30px;
+          border-radius: 20px;
+     }
+
+     @media (max-width: 767px) {
+          padding: 0px;
+          background-color: transparent;
+     }
+
+     &::before {
+          content: "";
+          position: absolute;
+          bottom: -281px;
+          left: -218px;
+          max-height: 702px;
+          max-width: 702px;
+          height: 100%;
+          width: 100%;
+          opacity: 0.4;
+          background-color: $secondary-color;
+          filter: blur(300px);
+          border-radius: 100%;
+          z-index: -1;
+     }
+
+     .cta_content_wrapper {
+          @media (max-width: 767px) {
+               background-color: $secondary-color;
+               padding: 20px;
+               border-radius: 20px;
+          }
+
+          .cta_text {
+               margin: 8px 0px 21px 0px;
+               max-width: 398px;
+               width: 100%;
+          }
+
+          .cta_buttons {
+               gap: 15px;
+
+               @media (max-width: 520px) {
+                    flex-direction: column;
+                    align-items: center;
+
+                    a {
+                         max-width: 260px;
+                         width: 100%;
+                         justify-content: center;
+                    }
+               }
+          }
+     }
+
+     .cta_mobile_mockup {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 60px;
+
+          @media (max-width: 991px) {
+               right: 30px;
+               max-width: 200px;
+               width: 100%;
+          }
+
+          @media (max-width: 767px) {
+               position: relative;
+               top: 0;
+               right: 0;
+               transform: translateY(0%);
+               margin: 0 auto;
+               margin-top: 50px;
+          }
+
+          @media (max-width: 575px) {
+               margin-top: 30px;
+          }
+
+          @media (max-width: 480px) {
+               margin-top: 20px;
+          }
+     }
+}

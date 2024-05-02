@@ -1,0 +1,211 @@
+@import "../../../assets/scss/variables.scss";
+
+.photo_restoration {
+     overflow: hidden;
+
+     .photo_restoration_box {
+          position: relative;
+     }
+
+     .photo_restoration_text {
+          margin-top: 13px;
+          max-width: 558px;
+
+          p {
+               line-height: 26px;
+          }
+     }
+
+     .main_slider {
+          margin: 50px 0px 30px 0px;
+          border-radius: 0px;
+          max-height: 757px;
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          border-radius: 30px;
+
+          @media (max-width: 991px) {
+               margin: 30px 0px 20px 0px;
+               border-radius: 20px;
+
+          }
+
+          @media (max-width: 575px) {
+               margin: 20px 0px 15px 0px;
+               border-radius: 15px;
+          }
+
+          img {
+               max-height: 100%;
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+          }
+
+          &::before,
+          &::after {
+               position: absolute;
+               top: 30px;
+               font-family: $primary-fonts;
+               font-size: $text-large;
+               font-style: normal;
+               font-weight: 600;
+               line-height: normal;
+               text-transform: capitalize;
+               padding: 8px 18px;
+               border-radius: 10px;
+               z-index: 1;
+
+               @media (max-width: 575px) {
+                    top: 15px;
+                    font-size: $text-very-small;
+                    padding: 5px 15px;
+                    font-weight: 500;
+               }
+          }
+
+          &::before {
+               content: "before";
+               left: 30px;
+               color: $black-color;
+               background-color: $yellow-gray;
+
+               @media (max-width: 575px) {
+                    left: 15px;
+               }
+          }
+
+          &::after {
+               background-color: $primary-color;
+               color: $white-color;
+               content: "after";
+               right: 30px;
+
+               @media (max-width: 575px) {
+                    right: 15px;
+               }
+          }
+     }
+
+     .feature_box {
+          background-color: $white-color;
+          padding: 3px;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: $transition-1;
+
+          .feature_image {
+               overflow: hidden;
+               border-radius: 19px;
+
+               img {
+                    transition: $transition-1;
+               }
+          }
+
+          .feature_name {
+               color: $feature-name;
+               font-size: $text-very-small;
+               font-style: normal;
+               font-weight: 600;
+               line-height: normal;
+               margin: 7px 0px;
+               display: -webkit-box;
+               -webkit-line-clamp: 2;
+               -webkit-box-orient: vertical;
+               overflow: hidden;
+               min-height: 34px;
+               padding: 0px 3px;
+               max-width: 126px;
+               word-wrap: break-word;
+          }
+
+          &:hover .feature_image img {
+               transform: scale(1.1);
+          }
+     }
+
+     .photo_restoration_bg_shapes {
+
+          .shape_1,
+          .shape_2,
+          .shape_3 {
+               position: absolute;
+          }
+
+          .shape_1 {
+               top: 205px;
+               left: 128px;
+
+               @media (max-width: 1700px) {
+                    top: 150px;
+                    left: 40px;
+                    height: calc(114px - 20px);
+                    width: calc(93px - 20px);
+               }
+
+               @media (max-width: 575px) {
+                    top: 160px;
+                    height: calc(114px - 40px);
+                    width: calc(93px - 40px);
+               }
+
+               @media (max-width: 480px) {
+                    top: 180px;
+                    height: calc(114px - 60px);
+                    width: calc(93px - 60px);
+               }
+          }
+
+          .shape_2 {
+               top: 367px;
+               right: 116px;
+
+               @media (max-width: 1700px) {
+                    right: 40px;
+                    height: calc(106px - 20px);
+                    width: calc(136px - 20px);
+               }
+
+               @media (max-width: 767px) {
+                    right: 10px;
+               }
+
+               @media (max-width: 575px) {
+                    height: calc(106px - 40px);
+                    width: calc(136px - 40px);
+               }
+
+               @media (max-width: 480px) {
+                    height: calc(106px - 60px);
+                    width: calc(136px - 60px);
+               }
+          }
+
+          .shape_3 {
+               bottom: 268px;
+               left: 139px;
+
+               @media (max-width: 1700px) {
+                    left: 45px;
+                    height: calc(87px - 20px);
+                    width: calc(114px - 20px);
+               }
+
+               @media (max-width: 767px) {
+                    left: 10px;
+               }
+
+               @media (max-width: 575px) {
+                    height: calc(87px - 40px);
+                    width: calc(114px - 40px);
+               }
+
+               @media (max-width: 480px) {
+                    height: calc(87px - 60px);
+                    width: calc(114px - 60px);
+               }
+          }
+     }
+}

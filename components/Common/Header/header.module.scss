@@ -1,0 +1,122 @@
+@import "../../../assets/scss/variables.scss";
+
+// * header css
+
+.header {
+     .header_wrapper {
+          padding: 30px 0px;
+          border-bottom: 2px solid var(--Border-Color, rgba(255, 255, 255, 0.15));
+
+          @media (max-width: 991px) {
+               padding: 20px 0px;
+          }
+     }
+
+     //* header logo
+
+     .header_logo {
+          position: relative;
+          z-index: 1000;
+
+          img {
+               @media (max-width: 991px) {
+                    width: 140px !important;
+               }
+          }
+     }
+
+     //* header links
+
+     .header_links {
+          ul {
+               gap: 24px;
+          }
+
+          .links {
+               color: $white-color;
+               font-size: $text-medium;
+               font-style: normal;
+               font-weight: 400;
+               line-height: normal;
+               text-transform: capitalize;
+               transition: $transition-1;
+
+               &:hover {
+                    color: $secondary-color;
+                    margin-bottom: 5px;
+               }
+          }
+
+          @media (max-width: 991px) {
+               position: fixed;
+               top: 0;
+               left: -100%;
+               z-index: 9;
+               width: 100%;
+               height: 100%;
+               transition: $transition-1;
+               background-color: $background-color;
+
+               ul {
+                    height: 100%;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+               }
+          }
+
+          &.open {
+               left: 0;
+          }
+     }
+
+     //* hamburger menu css
+
+     .nav_icon {
+          width: 35px;
+          height: 30px;
+          position: relative;
+          cursor: pointer;
+          transition: 0.25s ease-in-out;
+     }
+
+     .nav_icon span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: $white-color;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          transition: 0.25s ease-in-out;
+          z-index: 10;
+     }
+
+     .nav_icon span:nth-child(1) {
+          top: 0px;
+     }
+
+     .nav_icon span:nth-child(2) {
+          top: 14px;
+     }
+
+     .nav_icon span:nth-child(3) {
+          top: 28px;
+     }
+
+     .nav_icon.open span:nth-child(1) {
+          top: 14px;
+          transform: rotate(135deg);
+     }
+
+     .nav_icon.open span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+     }
+
+     .nav_icon.open span:nth-child(3) {
+          top: 14px;
+          transform: rotate(-135deg);
+     }
+}

@@ -1,0 +1,116 @@
+@import "../../../assets/scss/variables.scss";
+
+//* hero section css
+
+.hero_section {
+     padding: 100px 0px 121px 0px;
+     position: relative;
+
+     @media (max-width: 1399px) {
+          padding: 100px 0px;
+     }
+
+     @media (max-width: 1199px) {
+          padding: 80px 0px;
+     }
+
+     @media (max-width: 991px) {
+          padding: 70px 0px;
+     }
+
+     @media (max-width: 575px) {
+          padding: 50px 0px 65px 0px;
+     }
+
+     @media (max-width: 480px) {
+          padding: 30px 0px 45px 0px;
+     }
+
+     .hero_content {
+          h1 {
+               @media (width >= 1400px) {
+                    line-height: 90px;
+               }
+
+               .highlight {
+                    font-weight: 500;
+                    background-color: $primary-color;
+                    padding: 0px 25px;
+                    border-radius: 15px;
+                    transform: rotate(2deg);
+                    transition: $transition-1;
+                    -webkit-box-shadow: 0px 0px 79px 0px rgba(120, 6, 243, 0.36);
+                    -moz-box-shadow: 0px 0px 79px 0px rgba(120, 6, 243, 0.36);
+                    box-shadow: 0px 0px 79px 0px rgba(120, 6, 243, 0.36);
+
+                    &:hover {
+                         transform: rotate(0deg);
+                    }
+               }
+          }
+
+          .hero_paragraph {
+               margin: 50px 0px;
+               max-width: 558px;
+
+               p {
+                    line-height: 34px;
+               }
+
+               @media (max-width: 1199px) {
+                    margin: 30px 0px;
+               }
+
+               @media (max-width: 991px) {
+                    margin: 25px 0px 40px 0px;
+               }
+
+               @media (max-width: 767px) {
+                    margin: 15px 0px 30px 0px;
+               }
+
+               @media (max-width: 480px) {
+                    margin: 5px 0px 20px 0px;
+               }
+          }
+
+          .hero_buttons {
+               gap: 15px;
+
+               @media (max-width: 480px) {
+                    flex-direction: column;
+                    align-items: center;
+               }
+          }
+     }
+
+     &::before {
+          position: absolute;
+          content: "";
+          top: -520px;
+          left: -394px;
+          width: auto;
+          height: 1177px;
+          width: 1177px;
+          border-radius: 100%;
+          z-index: -1;
+          opacity: 0.3;
+          background: $accent-color;
+          filter: blur(300px);
+     }
+
+     &::after {
+          position: absolute;
+          content: "";
+          bottom: -556px;
+          right: -216px;
+          height: 826px;
+          width: 826px;
+          border-radius: 100%;
+          z-index: -1;
+          opacity: 0.3;
+          background: $primary-color;
+          opacity: 0.2;
+          filter: blur(300px);
+     }
+}

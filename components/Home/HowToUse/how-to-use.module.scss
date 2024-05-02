@@ -1,0 +1,137 @@
+@import "../../../assets/scss/variables.scss";
+
+.how_to_use {
+     margin: 120px 0px 110px 0px;
+
+     @media (max-width: 1199px) {
+          margin: 90px 0px;
+     }
+
+     @media (max-width: 991px) {
+          margin: 80px 0px;
+     }
+
+     @media (max-width: 767px) {
+          margin: 100px 0px;
+     }
+
+     @media (max-width: 575px) {
+          margin: 100px 0px 50px 0px;
+     }
+
+     @media (max-width: 480px) {
+          margin: 80px 0px 30px 0px;
+     }
+
+     .how_to_us_box {
+          position: relative;
+
+          .howToUseImageWrapper {
+               padding-right: 70px;
+
+               @media (max-width: 991px) {
+                    padding-right: 0px;
+               }
+          }
+
+          .pictureImage {
+               position: absolute;
+               top: -75px;
+               right: 110px;
+
+               @media (max-width: 1199px) {
+                    height: 140px;
+                    width: 140px;
+               }
+               @media (max-width: 991px) {
+                    height: 130px;
+                    width: 130px;
+                    right: 25px;
+               }
+               @media (max-width: 767px) {
+                    height: 120px;
+                    width: 120px;
+                    top: -105px;
+               }
+               @media (max-width: 575px) {
+                    top: -85px;
+                    height: 100px;
+                    width: 100px;
+               }
+               @media (max-width: 480px) {
+                    height: 80px;
+                    width: 80px;
+               }
+          }
+     }
+
+     .how_to_use_content {
+          margin-top: 50px;
+
+          @media (max-width: 991px) {
+               margin-top: 40px;
+          }
+
+          @media (max-width: 575px) {
+               margin-top: 30px;
+          }
+
+          @media (max-width: 480px) {
+               margin-top: 20px;
+          }
+
+          .how_to_use_box_wrapper {
+               border-radius: 40px;
+               padding: 20px 30px 34px 30px;
+               max-height: 295px;
+               height: 100%;
+
+               @media (max-width: 1199px) {
+                    max-height: 340px;
+               }
+
+               .how_to_use_number {
+                    height: 70px;
+                    width: 70px;
+                    margin-left: -10px;
+
+                    span {
+                         font-size: 36px;
+                         letter-spacing: 1.08px;
+                    }
+               }
+
+               h6 {
+                    margin: 24px 0px 15px 0px;
+                    letter-spacing: 0.66px;
+               }
+
+               .how_to_use_description {
+                    max-height: 104px;
+                    overflow: auto;
+
+                    &::-webkit-scrollbar {
+                         width: 3px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                         background-color: #ffffff52 !important;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                         box-shadow: none;
+                         background-color: $white-color;
+                    }
+
+                    &::-webkit-scrollbar-thumb:hover {
+                         box-shadow: none;
+                         background-color: $white-color;
+                    }
+               }
+
+               p {
+                    line-height: 26px;
+               }
+          }
+     }
+}
